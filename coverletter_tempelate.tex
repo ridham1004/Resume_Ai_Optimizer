@@ -1,0 +1,140 @@
+%==============================================================
+% BASE COVER LETTER — AI TAILORING SYSTEM
+% DO NOT EDIT MANUALLY — This is the master template
+% Tailoring engine rewrites %[BLOCK:*] sections per job description
+%==============================================================
+
+\documentclass[11pt, letterpaper]{article}
+
+% ---------- Packages ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{paracol}       % Two-column layout with independent columns
+\usepackage{lato}          % Clean sans-serif font (matches original aesthetic)
+\usepackage[default]{opensans}
+\usepackage{microtype}
+
+% ---------- Page Layout ----------
+\geometry{
+  top=0in,
+  bottom=0in,
+  left=0in,
+  right=0in,
+  nohead,
+  nofoot
+}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\pagestyle{empty}
+
+% ---------- Accent Color (orange from original) ----------
+\definecolor{accent}{RGB}{180, 60, 0}   % Dark orange — adjust hex to match exactly
+\definecolor{sidebar}{RGB}{255,255,255} % Sidebar background (white like original)
+\definecolor{bodytext}{RGB}{30,30,30}
+
+% ---------- Hyperlink style ----------
+\hypersetup{colorlinks=false}
+
+%==============================================================
+%  DOCUMENT START
+%==============================================================
+\begin{document}
+\color{bodytext}
+
+%--------------------------------------------------------------
+% TWO-COLUMN LAYOUT
+% Left  ~28% : Sidebar (Name + Contact)
+% Right ~72% : Letter Body
+%--------------------------------------------------------------
+\columnratio{0.28}
+\setlength{\columnsep}{0pt}
+
+\begin{paracol}{2}
+
+%--------------------------------------------------------------
+%[BLOCK: SIDEBAR]
+% TAILORING HINT: Replace [ROLE with job id] with the actual
+% role title and job ID from the JD. Everything else stays fixed.
+%--------------------------------------------------------------
+\begin{leftcolumn}
+\setlength{\leftskip}{0.35in}
+\setlength{\rightskip}{0.2in}
+\vspace*{0.5in}
+
+% --- Name (large, bold, black) ---
+{\fontsize{28}{32}\selectfont\textbf{[Your\\[2pt]Name]}}
+
+\vspace{8pt}
+
+% --- Horizontal rule in accent color ---
+{\color{accent}\rule{1.6in}{1.5pt}}
+
+\vspace{10pt}
+
+% --- Contact details in accent color ---
+{\color{accent}\small
+[Phone Number]\\[3pt]
+\href{mailto:youremail@example.com}{youremail@example.com}
+}
+
+\vspace{14pt}
+
+% --- Application label in accent color ---
+%[BLOCK: APPLICATION-LABEL]
+% TAILORING HINT: Replace role name and job ID dynamically.
+{\color{accent}\small\raggedright\textbf{Application for:\\[4pt] {{JOB\_ROLE}}}\par}
+
+\vspace*{\fill}
+\end{leftcolumn}
+
+%--------------------------------------------------------------
+%[BLOCK: LETTER-BODY]
+% TAILORING HINT: Rewrite entirely per JD.
+% Structure: Opening → Technical match (3 bullets) → Closing
+% Rules:
+%   - Only reference real projects from base_resume.tex
+%   - Mirror exact terminology from the JD
+%   - Keep bullet headers bold, matching JD section language
+%   - Do not fabricate metrics; only use what exists in resume
+%   - Salutation: "Dear [Company] Hiring Committee,"
+%   - Closing: "Sincerely, [Your Name]"
+%--------------------------------------------------------------
+\begin{rightcolumn}
+\setlength{\leftskip}{0.35in}
+\setlength{\rightskip}{0.4in}
+\vspace*{0.55in}
+
+% --- Salutation ---
+\textbf{Dear {{COMPANY\_NAME}} Hiring Committee,}
+
+\vspace{6pt}
+
+%[BLOCK: LETTER-BODY — AI GENERATED PER JD]
+% TAILORING HINT: Rewrite entirely per JD.
+% Structure: Opening → Bridge → Technical bullets (3) → Closing
+% Rules:
+%   - Only reference real projects from base_resume.tex
+%   - Mirror exact terminology from the JD
+%   - Keep bullet headers bold, matching JD section language
+%   - Do not fabricate metrics; only use what exists in resume
+%   - Closing line must mention availability/term if stated in JD
+{{COVER\_LETTER\_BODY}}
+
+\vspace{14pt}
+
+% --- Sign-off ---
+Sincerely,\\[6pt]
+\textbf{[Your Name]}
+
+\vspace*{\fill}
+\end{rightcolumn}
+
+\end{paracol}
+
+%==============================================================
+\end{document}

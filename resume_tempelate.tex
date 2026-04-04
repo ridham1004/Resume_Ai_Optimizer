@@ -1,0 +1,195 @@
+%==============================================================
+% BASE RESUME — AI TAILORING SYSTEM
+% DO NOT EDIT MANUALLY — This is the master template
+% Tailoring engine will read sections tagged with %[SECTION:*]
+% and selectively include/reorder based on job description
+%==============================================================
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{multicol}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom Commands
+%-------------------------
+
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+%==============================================================
+%  DOCUMENT START
+%==============================================================
+\begin{document}
+
+
+%--------------------------------------------------------------
+%[SECTION: HEADER]
+% TAILORING HINT: Always include. Do not modify content.
+%--------------------------------------------------------------
+\begin{center}
+    \textbf{\Huge \scshape [Your Name]} \\ \vspace{1pt}
+    \small [City, Province] $|$
+    \href{mailto:youremail@example.com}{\underline{youremail@example.com}} $|$
+    [XXX-XXX-XXXX] $|$
+    \href{https://linkedin.com/in/yourprofile}{\underline{linkedin.com/in/yourprofile}} $|$
+    \href{https://github.com/yourusername}{\underline{github.com/yourusername}}
+\end{center}
+
+
+%--------------------------------------------------------------
+%[SECTION: SUMMARY]
+% TAILORING HINT: Rewrite this section to mirror the job
+% description keywords. Keep to 3-4 bullets. Pick the most
+% relevant from the pool below and rephrase to match JD tone.
+%--------------------------------------------------------------
+\section{Summary of Qualifications}
+\begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+{{SUMMARY_PLACEHOLDER}}
+\end{itemize}
+
+
+%--------------------------------------------------------------
+%[SECTION: SKILLS]
+% TAILORING HINT: Reorder skill categories to front-load
+% what the JD emphasizes. Remove irrelevant subcategories.
+% Never fabricate skills not listed here.
+%--------------------------------------------------------------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+{{SKILLS_PLACEHOLDER}}
+  }}
+\end{itemize}
+
+
+%--------------------------------------------------------------
+%[SECTION: EDUCATION]
+% TAILORING HINT: Always include. Keep as-is.
+% If JD mentions GPA threshold, ensure it remains visible.
+%--------------------------------------------------------------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Toronto Metropolitan University}{Toronto, ON}
+    {Bachelor of Engineering (BEng) in Computer Engineering $|$ GPA: 3.63/4.33}{Jan 2024 -- Expected Jun 2027}
+    \resumeItemListStart
+      \resumeItem{Dean's List 2024--25 $|$ 3rd Year}
+      \resumeItem{\textbf{Relevant Coursework:} {{COURSEWORK_PLACEHOLDER}}}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+%--------------------------------------------------------------
+%[SECTION: PROJECTS]
+% TAILORING HINT: Select 3-4 most relevant projects based on
+% JD. Reorder so the most relevant appears first. Rephrase
+% bullet points to mirror JD language where truthful.
+% All 6 projects are available in the pool below.
+%--------------------------------------------------------------
+\section{Project Experience}
+\resumeSubHeadingListStart
+
+{{EXPERIENCE_PLACEHOLDER}}
+
+\resumeSubHeadingListEnd
+
+
+%--------------------------------------------------------------
+%[SECTION: LEADERSHIP]
+% TAILORING HINT: Include if JD mentions leadership, teamwork,
+% communication, mentorship, or student-facing work.
+% Select 2-3 most relevant roles. Reorder as needed.
+%--------------------------------------------------------------
+\section{Leadership \& Volunteer Experience}
+\resumeSubHeadingListStart
+
+  {{LEADERSHIP_PLACEHOLDER}}
+
+\resumeSubHeadingListEnd
+
+
+%--------------------------------------------------------------
+%[SECTION: AWARDS]
+% TAILORING HINT: Always include. Keep as-is.
+%--------------------------------------------------------------
+\section{Awards \& Accomplishments}
+\begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+  \resumeItem{\textbf{Dimitri Klimov Memorial Scholarship (2024):} Awarded for exceptional academic excellence and achievement.}
+  \resumeItem{\textbf{Hack the World --- 1st Place (2024):} Developed a modular EEG-based system integrated with LLMs to predict seizures; demonstrated technical expertise in AI-driven healthcare solutions.}
+  \resumeItem{\textbf{Dean's List (2024--25):} Recognized for academic excellence at Toronto Metropolitan University.}
+\end{itemize}
+
+
+%--------------------------------------------------------------
+%[SECTION: CERTIFICATIONS]
+% TAILORING HINT: Include if JD is security/compliance related.
+% Otherwise can be omitted to save space.
+%--------------------------------------------------------------
+\section{Certifications}
+\begin{itemize}[leftmargin=0.15in, label={\tiny$\bullet$}]
+  \resumeItem{\textbf{IBM SkillsBuild Cybersecurity Certificate:} Hands-on labs covering vulnerability assessments, secure network design, and incident investigation.}
+  \resumeItem{\textbf{Mastercard Cybersecurity Job Simulation (Forage):} Designed phishing simulations and interpreted security outcomes to strengthen practical incident analysis skills.}
+\end{itemize}
+
+
+%==============================================================
+\end{document}

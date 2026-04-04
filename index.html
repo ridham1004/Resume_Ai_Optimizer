@@ -165,7 +165,7 @@
             <button id="generate-btn"
                 class="group relative bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-headline font-black text-lg py-5 px-12 rounded-xl flex items-center gap-4 transition-all hover:shadow-[0_0_40px_rgba(255,181,158,0.2)] active:scale-95">
                 <span class="material-symbols-outlined group-hover:rotate-12 transition-transform">magic_button</span>
-                Generate Tailored Workspace
+                Generate Tailored Job Package
             </button>
         </div>
         <div id="output-panel" class="w-full max-w-4xl mx-auto hidden">
@@ -204,7 +204,7 @@
 
             // UI Loading State
             const originalBtnHTML = btn.innerHTML;
-            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">refresh</span> Processing via Vertex AI...';
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">refresh</span> Processing via Expert AI Agents...';
             btn.disabled = true;
             outputPanel.classList.add('hidden'); // Hide output if running again
 

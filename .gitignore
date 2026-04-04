@@ -1,6 +1,14 @@
-/2026_Co-Op_-_Software_Developer_–_Virtualization_and_SIL_Integration_General_Motors
-/IT_Intern_Freedom_Mobile
-/QA_Automation_Engineer_Internship_(8_months)_Nelnet
-/Role_Hiring
-/Semiconductor_EDA
-/Software_Engineer_intern_Company
+# Environments
+venv/
+__pycache__/
+
+# Credentials
+*.json
+.env
+
+# Generated Outputs
+*_Hiring/
+*.pdf
+*.log
+*.aux
+*.out

@@ -4,7 +4,7 @@ import json
 import os
 
 # Initialize Vertex AI
-vertexai.init(project="resume-ai-optimizer-492319", location="us-central1")
+vertexai.init(project="YOUR_GCP_PROJECT_ID", location="us-central1")
 
 def load_prompt(filename):
     """Helper function to read the markdown prompt files."""
@@ -16,7 +16,7 @@ def load_prompt(filename):
         return ""
 
 def run_agent_tailor(job_description, user_data_pool):
-    model = GenerativeModel("gemini-2.5-flash")
+    model = GenerativeModel("gemini-2.5-pro")
     
     resume_sys_instruction = load_prompt("resume_prompt.md")
     cl_sys_instruction = load_prompt("coverletter_prompt.md")

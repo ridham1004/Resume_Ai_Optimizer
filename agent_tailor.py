@@ -58,7 +58,7 @@ def run_agent_tailor(job_description, user_data_pool):
     print("Both Agents successfully generated tailored content!\n")
     return final_data
 
-def create_final_workspace(tailored_data, jd_text):
+def create_final_workspace(tailored_data, jd_text, candidate_name="candidate"):
     print("Injecting AI data into LaTeX templates...")
     
     try:
@@ -94,10 +94,10 @@ def create_final_workspace(tailored_data, jd_text):
     
     os.makedirs(folder_name, exist_ok=True)
 
-    with open(os.path.join(folder_name, "Ridham_Patel_resume.tex"), "w", encoding="utf-8") as f:
+    with open(os.path.join(folder_name, f"{candidate_name}_resume.tex"), "w", encoding="utf-8") as f:
         f.write(resume_tex)
         
-    with open(os.path.join(folder_name, "Ridham_Patel_coverletter.tex"), "w", encoding="utf-8") as f:
+    with open(os.path.join(folder_name, f"{candidate_name}_coverletter.tex"), "w", encoding="utf-8") as f:
         f.write(cl_tex)
         
     with open(os.path.join(folder_name, "job_description.txt"), "w", encoding="utf-8") as f:

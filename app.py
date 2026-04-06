@@ -15,11 +15,14 @@ candidate_name = "candidate"
 data_pool_default = ""
 
 if uploaded_file is not None:
-    file_content = uploaded_file.read().decode("utf-8")
-    # Derive candidate name from the uploaded filename (strip extension)
-    candidate_name = os.path.splitext(uploaded_file.name)[0]
-    data_pool_default = file_content
-    st.success(f"✅ Loaded resume: `{uploaded_file.name}`")
+    try:
+        file_content = uploaded_file.read().decode("utf-8")
+        # Derive candidate name from the uploaded filename (strip extension)
+        candidate_name = os.path.splitext(uploaded_file.name)[0]
+        data_pool_default = file_content
+        st.success(f"✅ Loaded resume: `{uploaded_file.name}`")
+    except UnicodeDecodeError:
+        st.error("❌ Could not read the file. Please upload a valid UTF-8 encoded .tex file.")
 
 col1, col2 = st.columns(2)
 
